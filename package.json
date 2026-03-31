@@ -14,7 +14,8 @@
     "url": "git://github.com/PTV-Group/leaflet-ptv-developer.git"
   },
   "scripts": {
-    "prepublish": "grunt"
+    "build": "node build.mjs",
+    "prepublishOnly": "node build.mjs"
   },
   "keywords": [
     "leaflet",
@@ -29,24 +30,11 @@
     "url": "https://github.com/PTV-Group/leaflet-ptv-developer/issues"
   },
   "homepage": "https://github.com/PTV-Group/leaflet-ptv-developer",
-  "browserify": {
-    "transform": [
-      "browserify-shim"
-    ]
-  },
-  "browserify-shim": {
-    "leaflet": "global:L"
-  },
   "dependencies": {
     "leaflet": "1.9.4",
     "superagent": "9.0.2"
   },
   "devDependencies": {
-    "browserify": "17.0.0",
-    "browserify-shim": "3.8.16",
-    "grunt": "1.6.1",
-    "grunt-browserify": "6.0.0",
-    "grunt-cli": "1.4.3",
-    "grunt-contrib-uglify": "5.2.2"
+    "esbuild": "0.25.2"
   }
 }
